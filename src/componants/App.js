@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchVideoListAsync } from "../redux/videoListActions";
 
@@ -10,9 +10,11 @@ import VideoContainer from "./VideoContainer";
 const App = () => {
   const errorMessage = useSelector((state) => state.video.errorMessage);
   const dispatch = useDispatch();
-  useEffect(() => {
+
+  React.useEffect(() => {
     dispatch(fetchVideoListAsync("neymar"));
-  }, []);
+    console.log("d");
+  }, [dispatch]);
   return (
     <>
       <div className="flex flex-col m-5 mx-5 sm:mx-10 md:mx-20 lg:mx-40">

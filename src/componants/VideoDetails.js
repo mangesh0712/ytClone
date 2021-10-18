@@ -10,6 +10,7 @@ const VideoDetails = () => {
     <div className="lg:w-8/12 py-2 pb-4 self-baseline lg:py-4 lg:mr-4 xl:mr-12 bg-gray-800 rounded-sm shadow-sm">
       {/* <video width="320" height="240" controls src={video.videoId}></video> */}
       <iframe
+        title={video.id}
         id="ytplayer"
         className="w-11/12 h-60 md:h-96 ml-3 lg:mx-5 rounded-sm shadow-md"
         src={`https://www.youtube.com/embed/${video.videoId}`}
